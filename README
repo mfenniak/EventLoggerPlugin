@@ -1,0 +1,37 @@
+EventLoggerPlugin is a server-side plugin for Source-engine dedicated servers.
+The plugin logs all game events into a PostgreSQL database for later analysis.
+
+Compilation (Windows):
+
+    * Open EventLoggerPlugin.sln with Visual Studio 2009.
+
+    * Define DB_CONNECT_STR in EventLoggerPlugin.cpp.
+
+    * Build solution.
+
+
+Installation (Windows):
+
+    * In your team fortress 2 steamapps directory (eg.
+      D:\Program Files\Steam\steamapps\mfenniak\team fortress 2\tf), create
+      a the directories "addons", "addons\eventloggerplugin", and 
+      "Addons\eventloggerplugin\bin".
+
+    * Write a file in "addons" called "eventloggerplugin.vdf" containing:
+
+        "Plugin"
+        {
+                "file"	"..\tf\addons\eventloggerplugin\bin\server.dll"
+        }
+
+    * Copy [Debug|Release]\server.dll into the eventloggerplugin\bin folder.
+
+    * Copy all the .dll files from a PostgreSQL installation into the "bin"
+      folder as well, including libpq.dll and other needed libraries.
+
+
+Compilation (Linux):
+
+    * Bwuahahaha.  The top-level Makefile works, but uses many hard-coded
+      paths.  Good luck.
+
