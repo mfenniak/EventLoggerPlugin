@@ -1,0 +1,20 @@
+CREATE TABLE GameSession (
+  Id SERIAL PRIMARY KEY,
+  Heartbeat TIMESTAMP DEFAULT NOW() NOT NULL
+);
+
+CREATE TABLE Event (
+  Id SERIAL  PRIMARY KEY,
+  GameSessionId INT4 REFERENCES GameSession (Id) NOT NULL,
+  DateTime TIMESTAMP DEFAULT NOW() NOT NULL,
+  Name TEXT NOT NULL
+);
+
+CREATE TABLE EventData (
+  EventId INT4 REFERENCES Event (Id) NOT NULL,
+  Key TEXT NOT NULL,
+  ValueString TEXT NULL,
+  ValueInt INT4 NULL,
+  ValueFloat FLOAT8 NULL,
+  PRIMARY KEY (EventId, Key)
+);

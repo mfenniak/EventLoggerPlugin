@@ -1,0 +1,8 @@
+*.ncb
+*.suo
+*.vcproj.*
+*.swp
+
+Debug
+Release
+

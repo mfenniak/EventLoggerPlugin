@@ -1,0 +1,7 @@
+
+ * Investigate whether subkeys of the event keys are ever present, and if so
+   begin to log them.
+
+ * Move database connection information into a config file; create and include
+   a sample config file in the repository.
+  
