@@ -3,7 +3,7 @@ The plugin logs all game events into a PostgreSQL database for later analysis.
 
 Compilation (Windows):
 
-    * Open EventLoggerPlugin.sln with Visual Studio 2009.
+    * Open EventLoggerPlugin.sln with Visual Studio 2008.
 
     * Define DB_CONNECT_STR in EventLoggerPlugin.cpp.
 
