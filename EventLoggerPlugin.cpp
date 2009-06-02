@@ -25,6 +25,7 @@
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"
 
+// #define DB_CONNECT_STR "host=127.0.0.1 port=5432 dbname=tfstats user=tfstats password=fakepassword"
 #if !defined(DB_CONNECT_STR)
 #error "Define DB_CONNECT_STR with PostgreSQL database connection information, eg. \"host=127.0.0.1 dbname=tfstats user=tfstats password=...\""
 #endif
